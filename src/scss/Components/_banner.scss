@@ -1,0 +1,22 @@
+.banner {
+  
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 600px;
+    height: 2000px;
+    background: #f6f9fc;
+    transform: skew(0,-12deg);
+  }
+  &:before {
+    top: 300px;
+    transform: skew(0,20deg);
+  }
+  &:after {
+    top: 600px;
+    transform: skew(0,-12deg);
+  }
+
+}

@@ -1,0 +1,23 @@
+body {
+  background: lighten(#CCC, 20%);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.wrap {
+    margin:0 auto;
+    width: percentage(760px / 1260px);
+}
+
+input {
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: inline-block;
+    outline: 0;
+}
+
+hr {
+    border: 0;
+    border-bottom: 1px solid #fff;
+}

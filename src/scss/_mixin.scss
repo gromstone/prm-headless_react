@@ -1,0 +1,23 @@
+@mixin text($size, $line, $margin: 0, $family: $text__family-sans) {
+    font-size: calc-em($size);
+    line-height: ($line/$size);
+    font-family: $family;
+    margin-bottom: calc-em($margin, $size);
+}
+
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background:darken($bg,18%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background:darken($bg,25%);
+  } 
+}
+
+@mixin box-shadow($left, $top, $radius, $color) {
+	box-shadow: $left $top $radius $color;
+	-webkit-box-shadow: $left $top $radius $color;
+	-moz-box-shadow: $left $top $radius $color;
+}

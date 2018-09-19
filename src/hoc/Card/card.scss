@@ -1,0 +1,21 @@
+.card {
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    margin: 20px;
+    padding: 3% 5%;
+    transition: all 0.7s ease;
+    
+    &--brand {
+        display: flex;
+        flex-flow: column;
+        min-height: 20vh;
+    }
+    
+    &--white {
+        background-color: #fff;
+    }
+
+    &--clicked {
+        font-size: 40px;
+    }
+}
