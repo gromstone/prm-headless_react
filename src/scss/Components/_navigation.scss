@@ -2,13 +2,13 @@ menu {
   grid-column: span 2;
 }
 
-ul {
+ul, nav {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-li {
+li, a {
     display: inline;
     font-size: 16px;
     padding: 5px;

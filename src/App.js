@@ -6,7 +6,7 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { ApolloProvider } from 'react-apollo';
 
-const GRAPHCMS_API = 'https://api-useast.graphcms.com/v1/cjlzh0opy003z01dm7v98ciqe/master'
+import { GRAPHCMS_API } from './access.js'
 
 const client = new ApolloClient({
   link: new HttpLink({ uri: GRAPHCMS_API }),

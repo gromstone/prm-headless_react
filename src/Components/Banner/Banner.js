@@ -5,7 +5,7 @@ import Aux from '../../hoc/aux';
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
 
-//import "../../scss/Components/_banner.scss";
+import '../../scss/index.scss';
 
 const banner = ({ data: { loading, error, summeryBanners } }) => {
     if (error) return <h1>Error fetching the post! </h1>
@@ -28,14 +28,14 @@ const banner = ({ data: { loading, error, summeryBanners } }) => {
 export const bannerQuery = gql`
 query {
   summeryBanners (where: {status: PUBLISHED}) {
-    status, id, bannerTitle, bannerImg {
+    id, bannerTitle, bannerImg {
       id, fileName, url
     }
   }
 }
 `
 export default graphql(bannerQuery, {
-    //currently options are not used
+//currently options are not used
 /*
     options: ({ match }) => ({
         variables: {

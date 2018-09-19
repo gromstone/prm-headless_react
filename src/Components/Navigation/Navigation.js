@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 
 import gql from 'graphql-tag';
 import { graphql } from 'react-apollo';
@@ -7,13 +8,18 @@ const links = ({ data: { loading, error, navigations } }) => {
     if (error) return <h1>Error fetching the post! </h1>;
     if (!loading) {
         return(
-            <ul>
-                { navigations.map((link) => (
-                    <li key={link.linkName}>
-                      <a href="">{link.linkName}</a>
-                    </li>
-                )) }
-            </ul>
+            <nav className='nav'>
+              { navigations[0].linkName.map((link) => (
+                <NavLink
+                  key={link}
+                  exact to={link === 'Home' ? '/' : `/${link}`}
+                  className='navLink'
+                  activeClassName='link-isActive'
+                >
+                  {link}
+                </NavLink>
+              )) }
+            </nav>
         )
     }
 
