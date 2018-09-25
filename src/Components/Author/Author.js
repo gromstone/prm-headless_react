@@ -1,8 +1,8 @@
-import React from 'react'
-import gql from 'graphql-tag'
-import { graphql } from 'react-apollo'
-​
-const About = ({ data: { loading, error, authors } }) => {
+import React from 'react';
+import gql from 'graphql-tag';​
+import { graphql } from 'react-apollo';
+
+const Author = ({ data: { loading, error, authors } }) => {
   if (error) return <h1>Error fetching authors!</h1>
   if (!loading) {
     return (
@@ -38,5 +38,4 @@ export const authors = gql`
     }
   }
 `
-​
-export default graphql(authors)(About)
+export default graphql(authors)(Author)

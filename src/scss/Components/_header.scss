@@ -1,8 +1,10 @@
 .header {
-  grid-column: span 12;
-  display: flex;
   background-color: #f1f1f1;
-  padding: 30px;
-  text-align: center;
-  font-size: 35px;
+  padding: 10px;
+
+  .nav.col {
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: 22px;
+  }
 }

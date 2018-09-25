@@ -7,8 +7,10 @@ import Header from "../../Components/Header/Header";
 import Content from "../../Components/Content/Content";
 import Footer from "../../Components/Footer/Footer";
 
-import Banner from  "../../Components/Banner/Banner";
+import Home from  "../../Components/HomeView/HomeView";
+//import About from  "../../Components/Author/Author";
 import Blog from  "../../Components/BlogView/BlogView";
+import Post from  "../../Components/Post/Post";
 
 import '../../scss/index.scss'
 
@@ -18,18 +20,18 @@ class Layout extends Component {
   render() {
     return (
       <Router>
-      <Aux>
-        <Header />
-        <Banner/>
-        <Content>
-          <Route exact path='/blog' component={Blog} />
-          {/*
-          <Route exact path='/about' component={About} />
-          <Route exact path='/post/:slug' component={Post} />
-          */}
-        </Content>
-        <Footer />
-      </Aux>
+        <Aux>
+          <Header />
+          <Content>
+            <Route exact path='/' component={Home} />
+            {/*
+              <Route path='/about' component={About} />
+            */}
+            <Route path='/blog' component={Blog} />
+            <Route path='/post/:slug' component={Post} />
+          </Content>
+          <Footer />
+        </Aux>
       </Router>
     );
   }

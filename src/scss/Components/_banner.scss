@@ -1,21 +1,32 @@
 .banner {
-  
+  display: block;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  img {
+    border-style: none;
+    box-sizing: border-box;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
   &:before, &:after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 600px;
-    height: 2000px;
+    height: 600px;
     background: #f6f9fc;
-    transform: skew(0,-12deg);
   }
   &:before {
     top: 300px;
     transform: skew(0,20deg);
   }
   &:after {
-    top: 600px;
+    top: 340px;
     transform: skew(0,-12deg);
   }
 

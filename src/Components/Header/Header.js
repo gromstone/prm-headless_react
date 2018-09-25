@@ -3,8 +3,10 @@ import Nav from "../../Components/Navigation/Navigation.js";
 
 const Header = () => {
   return (
-    <div className='header'>
+    <div className='header row'>
+      <div className='logo col'></div>
       <Nav/>
+      <div className='action col'></div>
     </div>
   )
 };

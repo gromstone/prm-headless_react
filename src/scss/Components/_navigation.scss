@@ -1,15 +1,5 @@
-menu {
-  grid-column: span 2;
-}
-
-ul, nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-li, a {
-    display: inline;
-    font-size: 16px;
-    padding: 5px;
+.nav {
+  align-items: stretch ;
+  justify-content: space-around;
+  text-align: center;
 }

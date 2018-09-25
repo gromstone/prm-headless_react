@@ -8,12 +8,12 @@ const links = ({ data: { loading, error, navigations } }) => {
     if (error) return <h1>Error fetching the post! </h1>;
     if (!loading) {
         return(
-            <nav className='nav'>
+            <nav className='nav col row'>
               { navigations[0].linkName.map((link) => (
                 <NavLink
                   key={link}
                   exact to={link === 'Home' ? '/' : `/${link}`}
-                  className='navLink'
+                  className='navLink col'
                   activeClassName='link-isActive'
                 >
                   {link}

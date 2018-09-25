@@ -9,6 +9,9 @@ const Post = ({data: {loading, error, post } }) => {
     return (
       <article>
         <h2>{post.title}</h2>
+        <p>{post.dateAndTime} | {post.tags.map(tag => (
+          <span className='tag' key={tag}>{tag}</span>
+          ))}</p>
         <div className='placeholder'>
           <img alt={post.title} src={`https://media.graphcms.com/resize=w:650,h:366,fit:crop/${post.coverImage.handle}`} />
         </div>
@@ -19,8 +22,8 @@ const Post = ({data: {loading, error, post } }) => {
   return <h2>Loading post...</h2>
 }
 
-export const siglePost = gql`
-  query singlePost($id: ID!) {
+export const singlePost = gql`
+  query Post($id: ID!) {
     post(where: { id: $id }) {
       id
       slug
@@ -30,6 +33,7 @@ export const siglePost = gql`
       }
       content
       dateAndTime
+      tags
     }
   }
 `

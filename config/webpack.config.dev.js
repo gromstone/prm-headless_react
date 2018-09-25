@@ -167,7 +167,7 @@ module.exports = {
                   options: {
                     modules: true,
                     sourceMap: true,
-                    localIdentName: '[name]__[local]___[hash:base64:5]'
+                    localIdentName: '[local]'
                   }
                 },
               'postcss-loader'
@@ -185,7 +185,7 @@ module.exports = {
                     modules: true,
                     sourceMap: true,
                     importLoaders: 2,
-                    localIdentName: '[name]__[local]___[hash:base64:5]'
+                    localIdentName: '[local]'
                   }
                 },
               'sass-loader'
